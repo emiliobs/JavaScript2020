@@ -1,104 +1,48 @@
-//POO
-/*
- Clase - Modelo a seguir.
- Objetos - Es una instancia de una clase
- -Atributos - Es una caracteristica o propiedad del objeto(sonvariable dentro de un objeto)
- -Métodos - Son acciones que un objeto puede realizar(son funciones de de un objeto) 
-*/
+//clases en jsva script:
+class Animal {
+  constructor(nombre, genero) {
+    this.nombre = nombre;
+    this.genero = genero;
+  }
 
-//OBJETO LITERAL
-console.log("Objeto Literal");
-
-const animal = {
-  nombre: "Emilio",
+  //Métodos:
   sonar() {
-    console.log("Hago sonido por que estoy vivo.....");
-  },
-};
-console.log(animal);
+    console.log("Hago sonido por que estoy vivo");
+  }
 
-const animal2 = {
-  nombre: "Emilia",
-  sonar() {
-    console.log("Hago sonido por que estoy vivo.....");
-  },
-};
-
-console.log(animal2);
-
-console.log("Función Constructora");
-
-//Fucnción constructora:
-function Animal(nombre, genero) {
-  //atributos
-  this.nombre = nombre;
-  this.genero = genero;
-  //Métodos
-  this.sonar = function () {
-    console.log("Hago sonidos por que estoy vivo.!!!");
-  };
-  this.saludar = function () {
+  saludar() {
     console.log(`Hola me llamo ${this.nombre}`);
-  };
+  }
+
 }
 
-const snoopy = new Animal("Anoopy", "Macho"),
-  lolaBunny = new Animal("Lola Bunny", "Hembra");
+class Perro extends Animal {
+  constructor(nombre, genero, tamanio) {
+    super(nombre, genero);
+    this.tamanio = tamanio;
+     }
 
-console.log(snoopy);
-console.log(lolaBunny);
+     sonar()
+     {
+       console.log("Soy un perro y mi sonido es un ladrido.");
+     }
 
-snoopy.sonar();
-snoopy.saludar();
+     ladrar(){
+       console.log("Guauuuu Guauuuuuuu");
+     }
 
-lolaBunny.sonar();
-lolaBunny.saludar();
+    }
 
-//Función Contructora donde asignamos los métodos al Protipo, no a la funcion como tal.
-console.log("Función Constructora con Prototipos");
 
-function AnimalP(nombre, genero) {
-  //atributos
-  this.nombre = nombre;
-  this.genero = genero;
-}
 
-//Métodos
-AnimalP.prototype.sonar = function () {
-  console.log("Hago sonidos por que estoy vivo.!!!");
-};
-AnimalP.prototype.saludar = function () {
-  console.log(`Hola me llamo ${this.nombre}`);
-};
+const mimi = new Animal("Mimi", "Hembra"),
+  scooby = new  Perro("Scooby", "Macho","Gigante");
 
-//HERENCIA PROTOTÍPICA
-function Perro(nombre, genero, tamanio) {
-  this.super = Animal;
-  this.super(nombre, genero);
-  this.tamanio = tamanio;
-}
+console.log(mimi);
+mimi.saludar();
+mimi.sonar();
 
-//Sobreescritura de métodos del Prototipo padre en el hijo:
-Perro.prototype.sonar = function () {
-  console.log("Soy un perro y mi sonido es un ladrido");
-};
-
-//Perro está heredando de Animal:
-Perro.prototype = new Animal();
-Perro.prototype.constructor = Perro;
-
-Perro.prototype.ladrar = function () {
-  console.log("Guauuuuu Guauuuuuuu");
-};
-const snoopyP = new Perro("Anoopy", "Macho", "Mediano"),
-  lolaBunnyP = new AnimalP("Lola Bunny", "Hembra");
-
-console.log(snoopyP);
-console.log(lolaBunnyP);
-
-snoopyP.sonar();
-snoopyP.saludar();
-snoopyP.ladrar();
-
-lolaBunnyP.sonar();
-lolaBunnyP.saludar();
+console.log(scooby);
+scooby.saludar();
+scooby.sonar();
+scooby.ladrar();
