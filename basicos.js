@@ -20,6 +20,7 @@ class Perro extends Animal {
   constructor(nombre, genero, tamanio) {
     super(nombre, genero);
     this.tamanio = tamanio;
+    this.raza = null;
      }
 
      sonar()
@@ -31,8 +32,25 @@ class Perro extends Animal {
        console.log("Guauuuu Guauuuuuuu");
      }
 
+     //Un mẃtodo estatico se pueden ejecutar sin necesidad de intancias la clase:
+    static  queEres(){
+      console.log("Los perros somos animales mamíferos que pertenecemos a la familia de loa caninos. somos considerados los mejores amigos del hombre.");
     }
 
+    get getRaza(){
+      return this.raza;
+    }
+
+    set setRaza(raza)
+    {
+      this.raza = raza;
+    }
+
+
+    }
+
+
+    Perro.queEres();
 
 
 const mimi = new Animal("Mimi", "Hembra"),
@@ -46,3 +64,6 @@ console.log(scooby);
 scooby.saludar();
 scooby.sonar();
 scooby.ladrar();
+console.log(scooby.getRaza);
+scooby.setRaza ="gràn Danés";
+console.log(scooby.getRaza);
