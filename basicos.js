@@ -1,69 +1,18 @@
-//clases en jsva script:
-class Animal {
-  constructor(nombre, genero) {
-    this.nombre = nombre;
-    this.genero = genero;
-  }
+console.log(console);
+console.error("Esto es un error");
+console.warn("Esto es un aviso");
+console.info("Esto es un mensaje informativo");
+console.log("Un registro de lo que ha apasado en nuestra aplicación");
 
-  //Métodos:
-  sonar() {
-    console.log("Hago sonido por que estoy vivo");
-  }
+let nombre = "Emilio", apellido = "Barrera" , edad = "35";
+console.log(nombre, apellido, edad);
+console.log(` Hola mi nombre es ${nombre} ${ apellido } y tengo ${ edad } años. `);
 
-  saludar() {
-    console.log(`Hola me llamo ${this.nombre}`);
-  }
+console.log(` Hola mi nombre es %s %s  y tengo %d años`, nombre, apellido, edad);
+console.clear();
 
-}
-
-class Perro extends Animal {
-  constructor(nombre, genero, tamanio) {
-    super(nombre, genero);
-    this.tamanio = tamanio;
-    this.raza = null;
-     }
-
-     sonar()
-     {
-       console.log("Soy un perro y mi sonido es un ladrido.");
-     }
-
-     ladrar(){
-       console.log("Guauuuu Guauuuuuuu");
-     }
-
-     //Un mẃtodo estatico se pueden ejecutar sin necesidad de intancias la clase:
-    static  queEres(){
-      console.log("Los perros somos animales mamíferos que pertenecemos a la familia de loa caninos. somos considerados los mejores amigos del hombre.");
-    }
-
-    get getRaza(){
-      return this.raza;
-    }
-
-    set setRaza(raza)
-    {
-      this.raza = raza;
-    }
-
-
-    }
-
-
-    Perro.queEres();
-
-
-const mimi = new Animal("Mimi", "Hembra"),
-  scooby = new  Perro("Scooby", "Macho","Gigante");
-
-console.log(mimi);
-mimi.saludar();
-mimi.sonar();
-
-console.log(scooby);
-scooby.saludar();
-scooby.sonar();
-scooby.ladrar();
-console.log(scooby.getRaza);
-scooby.setRaza ="gràn Danés";
-console.log(scooby.getRaza);
+console.log(window);
+console.log(document);
+console.dir(window);
+console.dir(document);
+console.clear();
