@@ -1,81 +1,40 @@
-console.log(console);
-console.error("Esto es un error");
-console.warn("Esto es un aviso");
-console.info("Esto es un mensaje informativo");
-console.log("Un registro de lo que ha apasado en nuestra aplicación");
+console.log(Date());
+let fecha = new  Date();
+console.log(fecha);
+//día del mes
+console.log(fecha.getDate());
+//día de la semana -> D L M Mi J V S ->0 1 2 3 4 5 6
+console.log(fecha.getDay());
+//Mes Ene Feb Mar Abr May Jun Ago Sep Act Nov
+//MAyo -> 0 1 2 3 4 5 6 7 8 9 10 11
+console.log(fecha.getMonth());
+console.log(fecha.getFullYear());
+console.log(fecha.getHours());
+console.log(fecha.getMinutes());
+console.log(fecha.getSeconds());
+console.log(fecha.getMilliseconds());
+console.log(fecha.toString());
+console.log(fecha.toDateString())
+console.log(fecha.toLocaleString());
+console.log(fecha.toLocaleDateString());
+console.log(fecha.toLocaleTimeString());
+console.log(fecha.getTimezoneOffset());
+console.log(fecha.getUTCDate())
+console.log(fecha.getUTCHours());
+console.log(fecha.getTime());
+console.log(Date.now());
+let cumpleEmilio = new Date(1975,04,09);
+console.log(cumpleEmilio);
 
-let nombre = "Emilio", apellido = "Barrera" , edad = "35";
-console.log(nombre, apellido, edad);
-console.log(` Hola mi nombre es ${nombre} ${ apellido } y tengo ${ edad } años. `);
 
-console.log(` Hola mi nombre es %s %s  y tengo %d años`, nombre, apellido, edad);
-console.clear();
 
-console.log(window);
-console.log(document);
-console.dir(window);
-console.dir(document);
-console.clear();
 
-console.group("Curso de @emiliobarrera");
-console.log("Curso de javascript");
-console.log("Curso de Node.js");
-console.log("Curso de  PWAs");
-console.log("Curso de Flexobox");
-console.log("Curso de diseo y progrmación web");
-console.groupEnd();
 
-console.groupCollapsed("Curso de @emiliobarrera");
-console.log("Curso de javascript");
-console.log("Curso de Node.js");
-console.log("Curso de  PWAs");
-console.log("Curso de Flexobox");
-console.log("Curso de diseo y progrmación web");
-console.groupEnd();
 
-console.clear();
 
-console.log(console);
-console.table(Object.entries(console).sort());
 
-const numeros = [1,2,3,4,5], vocales = ["a","e","i","o","u"];
-console.table(numeros);
-console.table(vocales);
 
-const perro = 
-{
-	 nombre: "Emilio",
-	 raza: "Boxer",
-	 color:"cafe"	
 
-}
 
-console.table(perro);
-console.clear();
 
-console.time("Cuanto tiempo tarda mi código");
-const arreglo = Array(1000000);
-for (let i = 0; i < Array.length; i++) 
-{
-	   arreglo[i] = i;
-	
-}
 
-console.timeEnd("Cuanto tiempo tarda mi código");
-console.log(arreglo);
-
-console.clear();
-
-for (let i = 0; i < 100; i++) {
-
-	console.count("Código for");
-	console.log(i);
-
-}
-
-console.clear();
-
-	let x =5,
-	 y = 2; 
-	let pruebaXY = "Se espera que X sea menor que Y";
-console.assert(x < y,{x,y, pruebaXY});
