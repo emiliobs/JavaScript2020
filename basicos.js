@@ -1,21 +1,38 @@
-console.log(Math);
-console.log(Math.PI);
-//VAlor absolucto:
-console.log(Math.abs(-7.8));
-//Para redondiar el número a mayor:
-console.log(Math.ceil(5.5));
-//Para redondiar el número a menor:
-console.log(Math.floor(5.5));
-//Para redondiar al mas cercano número:
-console.log(Math.round(5.5));
-console.log(Math.sqrt(81));
-console.log(Math.pow(5,5));
-//Indica un número positivo o negativo
-console.log(Math.sign(-5.5));
-console.log(Math.sign(-0.5));
-console.log(Math.random());
-console.log(Math.round(Math.random () * 1000));
+/*
+	Cortocircuito OR - cuando el valor de  la izquierda en la expresion siempre puede validar al true, es el valor que se cargará siempre puede validar a true, es el valor que se cargarra por por defecto.
+	
+	Cortocircuito AND - cuando el valor de a izquierda en la expresion siempre puede validar a false, es el valor que se cargaraá por defecto.
+*/
 
+function  saludar(nombre ) {
+	nombre = nombre || "Desconocido"
+	
+	console.log(`Hola ${nombre}`);
+	
+}
+saludar("Emilio");
+saludar();
+console.log("cadena" || "valor de la cadena");
+console.log(55 || "valor de la cadena");
+console.log(true || "valor de la cadena");
+console.log([] || "valor de la cadena");
+console.log({} || "valor de la cadena");
+console.log(false || "valor de la cadena");
+console.log(null || "valor de la cadena");
+console.log(undefined || "valor de la cadena");
+console.log("" || "valor de la cadena");
+console.log(-2 || "valor de la cadena");
+console.log(undefined && "valor de la cadena");
+console.log(false && "valor de la cadena");
+console.log(null && "valor de la cadena");
+console.log(undefined && "valor de la cadena");
+console.log("" && "valor de la cadena");
+console.log(-2 && "valor de la cadena");
+console.log("cadena"  && "valor de la cadena");
+console.log(55 && "valor de la cadena");
+console.log(true && "valor de la cadena");
+console.log([] && "valor de la cadena");
+console.log({} && "valor de la cadena");
 
 
 
