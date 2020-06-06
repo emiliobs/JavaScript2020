@@ -1,17 +1,40 @@
-/*
-Expresiones Regulares:
-Son una secuencia de caracteres que forman un patón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadena de caracteres.
-*/
+/* Funciones Anonimas Autoejecutables */
 
-let cadena = "Lorem ipsum emilio dolor sit amet 5 consectetur adipisicing elit. Dolores sunt similique itaque iure repellat dolore atque 36 earum id  55 ut praesentium, repudiandae provident Emilio quibusdam doloribus? Laboriosam emilio provident error dolores quos assumenda!";
- 
-// let expReg = new RegExp("dolores","ig");
-// console.log(expReg.test(cadena));
-// console.log(expReg.exec(cadena));
+(function () {
+  console.log("Mi primer IIFE");
+  
 
-let expReg2 = /emilio/ig;
-console.log(expReg2.test(cadena));
-console.log(expReg2.exec(cadena));
+})();
 
+(function (d,w,c) {
+  
+console.log("Mi Segunda IIFE");
+console.log(d);
+console.log(w);
+c.log("Este es un console.log");
+})(document,window,console);
 
- 
+/*Formar de escribir las funciones Ançonimas  Autoejecutables*/
+//Clasica
+(function (params) {
+  console.log("Versión clasica");
+  
+})();
+
+//La Crockford(Javascript the good Parst
+((function () {
+  console.log("Versión Crockford");
+  
+})());
+
+//Unaria
++function() {
+  console.log("Versión Unaria");
+  
+}();
+
+//Facebook
+!function () {
+  console.log("Versión Facebook.!");
+  
+}();
