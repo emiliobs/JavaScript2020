@@ -44,6 +44,7 @@ const repetirTexto = (texto = "", veces = undefined) => {
     if (!texto) return console.warn("No ingresaste texto");
 
     if (veces === undefined) return console.warn("No ingresaste el número de veces a repetir el texto");
+    if (veces === 0) return console.error("El número de veces no puede ser 0");
 
     if (Math.sign(veces) === -1) return console.error("El número de veces no puede ser negativo");
 
@@ -56,4 +57,6 @@ const repetirTexto = (texto = "", veces = undefined) => {
 repetirTexto();
 repetirTexto("Emilio");
 repetirTexto("", 5);
+repetirTexto("emilio", -1);
+repetirTexto("emilio", 0);
 repetirTexto("Emilio", 5);
