@@ -56,4 +56,6 @@ factorial();
 factorial({});
 factorial("");
 factorial(-5);
+factorial([5,2,6,-4]);
 factorial(5);
+factorial(55);
