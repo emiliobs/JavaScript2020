@@ -69,7 +69,9 @@ validarEmail("55555.com");
 validarEmail("emilio@gmail.com");
 validarEmail("emilio.@gmail.com.com");
 validarEmail("emilio.gmail.com.co");
+
 console.log("Programa fusión 19 y 20");
+
 const validarPatron = (cadena = "", patron = undefined) => {
 	if (!cadena) return console.warn("No ingresaste un cadena.");
 
@@ -92,6 +94,7 @@ const validarPatron = (cadena = "", patron = undefined) => {
 validarPatron();
 validarPatron("55","emilio");
 validarPatron("emilio@gmail.com", /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i);
+validarPatron("emilio barrera", /^[A-Za-zÑñÁÉIÓÚáéíóúüÜ\s]+$/g);
 
 
 
